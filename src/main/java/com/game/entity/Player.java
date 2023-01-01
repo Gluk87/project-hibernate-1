@@ -1,7 +1,6 @@
 package com.game.entity;
 
 import jakarta.persistence.*;
-import org.springframework.lang.NonNull;
 
 
 import java.util.Date;
