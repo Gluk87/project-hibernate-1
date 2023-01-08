@@ -14,6 +14,20 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring.version>5.3.23</spring.version>
+		<bytebuddy.version>1.12.17</bytebuddy.version>
+		<slf4j.version>2.0.2</slf4j.version>
+		<jboss.version>3.4.3.Final</jboss.version>
+		<jakarta.activation.version>2.0.1</jakarta.activation.version>
+		<xml.bind.version>3.0.1</xml.bind.version>
+		<javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+		<javax.servlet-jstl.version>1.2</javax.servlet-jstl.version>
+		<log4j.version>2.19.0</log4j.version>
+		<jackson-databind.version>2.13.4</jackson-databind.version>
+		<thymeleaf.version>3.0.15.RELEASE</thymeleaf.version>
+		<hibernate.version>5.6.11.Final</hibernate.version>
+		<postgresql.version>42.5.1</postgresql.version>
+		<annotation.version>1.3.2</annotation.version>
+		<p6spy.version>3.9.1</p6spy.version>
 	</properties>
 
 	<dependencyManagement>
@@ -21,12 +35,12 @@
 			<dependency>
 				<groupId>net.bytebuddy</groupId>
 				<artifactId>byte-buddy</artifactId>
-				<version>1.12.17</version>
+				<version>${bytebuddy.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>2.0.2</version>
+				<version>${slf4j.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -51,17 +65,17 @@
 			<dependency>
 				<groupId>org.jboss.logging</groupId>
 				<artifactId>jboss-logging</artifactId>
-				<version>3.4.3.Final</version>
+				<version>${jboss.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.sun.activation</groupId>
 				<artifactId>jakarta.activation</artifactId>
-				<version>2.0.1</version>
+				<version>${jakarta.activation.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
-				<version>3.0.1</version>
+				<version>${xml.bind.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -76,39 +90,64 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.1</version>
+			<version>${javax.servlet-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${javax.servlet-jstl.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-to-slf4j</artifactId>
-			<version>2.19.0</version>
+			<version>${log4j.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.13.4</version>
+			<version>${jackson-databind.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf</artifactId>
-			<version>3.0.15.RELEASE</version>
+			<version>${thymeleaf.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring5</artifactId>
-			<version>3.0.15.RELEASE</version>
+			<version>${thymeleaf.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core-jakarta</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>${annotation.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>p6spy</groupId>
+			<artifactId>p6spy</artifactId>
+			<version>${p6spy.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
